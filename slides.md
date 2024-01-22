@@ -154,8 +154,13 @@ _transition: fade-out
 
 ---
 
-# Have fun writing! 🎉
+![bg brightness:6 opacity:0.25](assets/3x4/indigo-medium-poly-outline-1.png)
+
+# <!-- fit --> Have fun writing! :rocket: :100: :tada: 
 
 <!--
+_backgroundImage: ""
+_backgroundColor: "#fff"
 _paginate: false
+_color: #111
  -->
