@@ -46,7 +46,7 @@ present: slides-preview
 # Document rendering tools
 ###############################################
 
-pandoc-pdf:
+document-pdf:
 	@echo "Rendering PDF document using pandoc..."
 	pandoc -o $(FILENAME).pdf ${MAIN_MD} --template assets/eisvogel.tex --listings --toc --toc-depth 2 --number-sections
 	@echo "Done."
@@ -156,7 +156,7 @@ help:
 	@echo " - make help			# Shows this help"
 	@echo ""
 	@echo "Advanced targets:"
-	@echo " - make pandoc-pdf		# Renders the main.md file to a PDF document using pandoc"
+	@echo " - make document-pdf		# Renders the main.md file to a PDF document using pandoc"
 	@echo " - make document-tex		# Renders the main.md file to a TEX document using pandoc"
 	@echo " - make slides-pdf		# Renders the slides.md file to a PDF file using marp"
 	@echo " - make slides-html		# Renders the slides.md file to a HTML file using marp"
