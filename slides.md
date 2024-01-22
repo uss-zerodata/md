@@ -34,7 +34,7 @@ style: |
   img{
     fill-opacity: 0.1;
   }
-  
+
   /* Define the style of "morph" class */
   .morph {
     display: inline-block;
@@ -90,7 +90,6 @@ _header: Features
 
 ![bg](assets/defaults/hex-04.svg)
 
-
 ## <span class="morph" style="--morph-name:a1;">Writing your document</span>
 
 Write your document in the `main.md` file. This file is the main file of your document and will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/)
@@ -123,13 +122,21 @@ To compile the document just use the Makefile.
 
 ```bash
 make			# Renders the main.md and slides.md files to various formats. (Default)
-make document	# Renders the main.md file to a PDF document.
+make document		# Renders the main.md file to a PDF document.
 make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
 make clear		# Deletes all temporary files
 make purge		# Deletes all temporary and output files
 make setup		# Installs the template and all dependencies
 make help		# Shows this help
 ```
+
+<!--
+make setup		# Installs the template and all dependencies.  
+make tex		# Renders the main.md file to a LaTeX document.  
+make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.  
+make present	# Starts a live preview of the slides.md file in your browser.  
+make clear		# Deletes all temporary files.
+ -->
 
 <!--
 _header: Compiling
@@ -148,19 +155,26 @@ make install
 ```
 
 <!--
+Requirements:
+- make
+- pandoc
+- texlive-core or Miktex
+- nodejs
+- texteditor like vscode
+ -->
+
+<!--
 _header: Installation
 _transition: fade-out
  -->
 
 ---
 
-![bg brightness:6 opacity:0.25](assets/3x4/indigo-medium-poly-outline-1.png)
+![bg brightness:1.5 contrast:1.5](assets/3x4/orange-dark-hex-outline-3.png)
 
-# <!-- fit --> Have fun writing! :rocket: :100: :tada: 
+# <!-- fit --> Have fun writing! :rocket: :100: :tada:
 
 <!--
-_backgroundImage: ""
-_backgroundColor: "#fff"
 _paginate: false
-_color: #111
+_color: #ccc
  -->
