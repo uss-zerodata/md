@@ -1,11 +1,44 @@
-# Markdown Template
+---
+title: Markdown
+subtitle: One Template to rule them all
+desc: "A template for all your markdown needs. Creating beautiful documents and slides by only using markdown."
+subject: "Markdown"
+date: "01.01.2024"
+author: [Florian Hektor]
+institute: ""
+keywords:
+  [
+	Markdown,
+	Pandoc,
+	Template
+  ]
+lang: "en"
 
-One Template to rule them all
-A template for all your markdown needs. Creating beautiful documents written in markdown and rendered using pandoc.
+titlepage: true,
+titlepage-text-color: "FFFFFF"
+titlepage-rule-color: "360049"
+titlepage-rule-height: 0
+titlepage-background: "assets/document/bg-blue-1.png"
+
+titlepage-logo: ""
+footnotes-pretty: true
+toc-own-page: true
+
+header-left: ""
+header-center: ""
+header-right: ""
+footer-left: ""
+footer-center: ""
+footer-right: ""
+
+bibtex: true
+biblio-style: IEEEtran
+bibliography: sources.bib
+---
 
 # Introduction
 
-This is a template for all your markdown needs. Creating beautiful documents written in markdown and rendered using pandoc.
+A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 # Features
 
@@ -20,24 +53,25 @@ This is a template for all your markdown needs. Creating beautiful documents wri
 
 ## Writing
 
-You can write your document in the `main.md` file. This file is the main file of your document. It will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/) or the [markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/).
+You can write your document in the `main.md` file. This file is the main file of your document. It will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/)\cite{markdown_basic_nodate} or the [markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)\cite{markdown_markdown_nodate}.
 
-In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the ``command to start a new page or the`\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX) or the [LaTeX cheat-sheet](https://wch.github.io/latexsheet/).
+In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)\cite{latex_latex_nodate} or the [LaTeX cheat-sheet](https://wch.github.io/latexsheet/)\cite{wch_latexsheet_nodate}.
 
 ## Compiling
 
 To compile the document just use the Makefile.
 
 ```bash
-make			# Creates the PDF file using latexmk (default)
-make tex		# Creates the TEX file using pandoc
-make pdf		# Creates the PDF file using pandoc (without biblatex)
-make render		# Creates the PDF file using latexmk (with biblatex)
-make clean		# Deletes all temporary files
-make purge		# Deletes all temporary files and the output files
-make install	# Installs the template and all dependencies
-make help		# Shows the help message
+make			# Renders the main.md and slides.md files to various formats. (Default)
+make document	# Renders the main.md file to a PDF document.
+make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
+make clear		# Deletes all temporary files
+make purge		# Deletes all temporary and output files
+make setup		# Installs the template and all dependencies
+make help		# Shows this help
 ```
+
+\newpage
 
 # Installation
 
@@ -49,19 +83,21 @@ make install
 
 ## Windows
 
-If you are using Windows you can use [Chocolatey](https://chocolatey.org/) to install the dependencies through the command line. If you don't have Chocolatey installed already, you can install it by following the instructions on the [Chocolatey website](https://chocolatey.org/install).
+If you are using Windows you can use [Chocolatey](https://chocolatey.org/)\cite{choco_chocolatey_nodate} to install the dependencies through the command line. If you don't have Chocolatey installed already, you can install it by following the instructions on the [Chocolatey website](https://chocolatey.org/install)\cite{choco_chocolatey_nodate}.
 
 ```bash
 # Chocolatey
-choco install pandoc miktex strawberryperl make
+choco install pandoc miktex strawberryperl make nodejs
+npm install
 ```
 
 It is also possible to install the dependencies manually.
 
-- [Pandoc](https://pandoc.org/installing.html)
-- [MiKTeX](https://miktex.org/download)
-- [Strawberry Perl](http://strawberryperl.com/)
-- [Make](http://gnuwin32.sourceforge.net/packages/make.htm)
+- [Pandoc](https://pandoc.org/installing.html)\cite{pandoc_pandoc_nodate}
+- [MiKTeX](https://miktex.org/download)\cite{miktex_getting_nodate}
+- [Strawberry Perl](http://strawberryperl.com/)\cite{perl_strawberry_nodate}
+- [Make](http://gnuwin32.sourceforge.net/packages/make.htm)\cite{gnuwin_make_nodate}
+- [Node.js](https://nodejs.org/en/download/)
 
 ## Linux
 
@@ -70,15 +106,19 @@ If you are using Linux you can use the package manager of your distribution to i
 ```bash
 # Debian/Ubuntu
 sudo apt update
-sudo apt-get install pandoc texlive-full perl make -y
+sudo apt-get install pandoc texlive-full perl make nodejs
+npm install
 ```
 
 It is also possible to install the dependencies manually.
 
-- [Pandoc](https://pandoc.org/installing.html)
-- [TeX Live](https://www.tug.org/texlive/)
-- [Perl](https://www.perl.org/get.html)
-- [Make](https://www.gnu.org/software/make/)
+- [Pandoc](https://pandoc.org/installing.html)\cite{pandoc_pandoc_nodate}
+- [TeX Live](https://www.tug.org/texlive/)\cite{texlive_tex_nodate}
+- [Perl](https://www.perl.org/get.html)\cite{perl_perl_nodate}
+- [Make](https://www.gnu.org/software/make/)\cite{gnu_make_nodate}
+- [Node.js](https://nodejs.org/en/download/)
+
+\newpage
 
 # Customization
 
@@ -105,11 +145,13 @@ pandoc -o output.pdf .main.md --template assets/eisvogel.tex --listings --toc --
 
 - `-o output.pdf`: output file is output.pdf
 - `input.md`: input file is input.md
-- `--template assets/eisvogel.tex`: use [eisvogel.tex](https://github.com/Wandmalfarbe/pandoc-latex-template) as template
+- `--template assets/eisvogel.tex`: use [eisvogel.tex](https://github.com/Wandmalfarbe/pandoc-latex-template)\cite{wagler_wandmalfarbepandoc-latex-template_2024} as template
 - `--listings`: use listings package for code highlighting
 - `--top-level-division=chapter`: use chapters instead of sections
 - `--toc`: generate table of contents
 - `--toc-depth 2`: set depth of table of contents to 2
+
+\newpage
 
 ## Template Variables
 
@@ -250,6 +292,6 @@ You can customize the template by changing the front matter of the `main.md` fil
 
 # Credits
 
-- [Pandoc](https://pandoc.org/)
-- [LaTeX](https://www.latex-project.org/)
-- [Eisvogel Template](https://github.com/Wandmalfarbe/pandoc-latex-template)
+- [Pandoc](https://pandoc.org/)\cite{pandoc_pandoc_nodate-1}
+- [LaTeX](https://www.latex-project.org/)\cite{latex_latex_nodate-1}
+- [Eisvogel Template](https://github.com/Wandmalfarbe/pandoc-latex-template)\cite{wagler_wandmalfarbepandoc-latex-template_2024}

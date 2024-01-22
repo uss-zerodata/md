@@ -1,0 +1,26 @@
+node_modules/
+package-lock.json
+.env
+
+# exclude all LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls 
+*.log
+*.pdf
+*.run.xml
+*.synctex.gz
+*.tex
+*.toc
+*.out
+*.out.ps
+
+# include assets/ folder
+!assets/*
+
+# include examples/ folder
+!examples/*
