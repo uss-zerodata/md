@@ -26,7 +26,7 @@ After you finished writing your document you can compile it to a PDF file using 
 
 ```bash
 make			# Renders the main.md and slides.md files to various formats. (Default)
-make document	# Renders the main.md file to a PDF document.
+make document	  # Renders the main.md file to a PDF document.
 make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
 make clear		# Deletes all temporary files
 make purge		# Deletes all temporary and output files
