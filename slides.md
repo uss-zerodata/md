@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 backgroundColor: #001220
-backgroundImage: url('assets/slides/hex-01.svg')
+backgroundImage: url('assets/defaults/hex-01.svg')
 transition: fade
 
 style: |
@@ -59,7 +59,7 @@ _transition: fade-out
 
 ---
 
-![bg](assets/slides/hex-02.svg)
+![bg](assets/defaults/hex-02.svg)
 
 # Introduction
 
@@ -71,7 +71,7 @@ _header: Introduction
 
 ---
 
-![bg](assets/slides/hex-03.svg)
+![bg](assets/defaults/hex-03.svg)
 
 # Features
 
@@ -88,7 +88,7 @@ _header: Features
 
 ---
 
-![bg](assets/slides/hex-04.svg)
+![bg](assets/defaults/hex-04.svg)
 
 
 ## <span class="morph" style="--morph-name:a1;">Writing your document</span>
@@ -102,7 +102,7 @@ _footer: https://www.markdownguide.org/basic-syntax/
 
 ---
 
-![bg](assets/slides/hex-05.svg)
+![bg](assets/defaults/hex-05.svg)
 
 ## <span class="morph" style="--morph-name:a1;">Writing your document</span>
 
@@ -115,7 +115,7 @@ _footer: https://en.wikibooks.org/wiki/LaTeX
 
 ---
 
-![bg](assets/slides/hex-06.svg)
+![bg](assets/defaults/hex-06.svg)
 
 # Compiling
 
@@ -137,7 +137,7 @@ _header: Compiling
 
 ---
 
-![bg](assets/slides/hex-07.svg)
+![bg](assets/defaults/hex-07.svg)
 
 # Installation
 
