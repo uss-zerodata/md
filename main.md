@@ -4,7 +4,7 @@ subtitle: One Template to rule them all
 desc: "A template for all your markdown needs. Creating beautiful documents and slides by only using markdown."
 subject: "Markdown"
 date: "01.01.2024"
-author: [Florian Hektor]
+author: [github.com/uss-zerodata]
 institute: ""
 keywords:
   [
@@ -36,8 +36,9 @@ biblio-style: IEEEtran
 bibliography: sources.bib
 ---
 
-# Introduction
+# Markdown Template
 
+One Template to rule them all
 A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 # Features
@@ -51,15 +52,15 @@ A template for all your markdown needs. Creating beautiful documents and slides 
 
 # Usage
 
-## Writing
+Write your document in the `main.md` file. Then compile it using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/) or the [markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/).
 
-You can write your document in the `main.md` file. This file is the main file of your document. It will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/)\cite{markdown_basic_nodate} or the [markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)\cite{markdown_markdown_nodate}.
+In addition to the markdown syntax you can also use LaTeX commands in your document. For example you can use `\newpage` to enforce a page break or `\cite` to quote a source from a bibliography file. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX) or the [LaTeX cheat-sheet](https://wch.github.io/latexsheet/).
 
-In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)\cite{latex_latex_nodate} or the [LaTeX cheat-sheet](https://wch.github.io/latexsheet/)\cite{wch_latexsheet_nodate}.
+Presentations can be created in the `slides.md`. In contrast to the main document, it does not support LaTeX commands. But you can use all Markdown features in combination with CSS. 
 
 ## Compiling
 
-To compile the document just use the Makefile.
+After you finished writing your document you can compile it to a PDF file using `make`.
 
 ```bash
 make			# Renders the main.md and slides.md files to various formats. (Default)
@@ -68,18 +69,30 @@ make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
 make clear		# Deletes all temporary files
 make purge		# Deletes all temporary and output files
 make setup		# Installs the template and all dependencies
-make help		# Shows this help
+make help		# Shows a help message with all available commands
 ```
 
 \newpage
 
-# Installation
+# Setup
 
-You can work on this template with any text editor you like. But you need to have some requirements installed on your system in order to compile the document. To install the requirements on your system you can use the Makefile. It will install all required dependencies for you automatically.
+To automatically install all dependencies use the Makefile.
 
 ```bash
-make install
+make setup
 ```
+
+For editing, we recommend using [Visual Studio Code](https://code.visualstudio.com/). It is a free and open source text editor, that can be customized with extensions to fit your needs. We recommend the following extensions.
+
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [Excel to Markdown table](https://marketplace.visualstudio.com/items?itemName=csholmq.excel-to-markdown-table)
+- [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview)
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [Markdown Shortcuts](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts)
+- [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)
+- [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
 ## Windows
 
