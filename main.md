@@ -18,7 +18,7 @@ titlepage: true,
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "assets/a4/default.png"
+titlepage-background: "assets/defaults/title.png"
 titlepage-logo: ""
 footnotes-pretty: true
 toc-own-page: true
