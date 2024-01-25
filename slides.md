@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 backgroundColor: #001220
-backgroundImage: url('assets/defaults/hex-01.svg')
+backgroundImage: url('assets/3x4/blue-dark-hex-outline-1.png')
 transition: fade
 
 style: |
@@ -53,25 +53,27 @@ One Template to rule them all
 <small>A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.</small>
 
 <!--
+_backgroundImage: url('assets/3x4/blue-dark-hex-1.png')
 _paginate: false
 _transition: fade-out
  -->
 
 ---
 
-![bg](assets/defaults/hex-02.svg)
+![bg right:45% ](assets/Markdown-Logo.webp)
 
 # Introduction
 
 A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 <!--
+_backgroundImage: url('assets/3x4/blue-dark-hex-outline-2.png')
 _header: Introduction
  -->
 
 ---
 
-![bg](assets/defaults/hex-03.svg)
+![bg right:45% ](assets/chairs.jpg)
 
 # Features
 
@@ -83,68 +85,35 @@ _header: Introduction
 - Easy to extend
 
 <!--
+_backgroundImage: url('assets/3x4/blue-dark-hex-outline-3.png')
 _header: Features
  -->
 
 ---
-
-![bg](assets/defaults/hex-04.svg)
 
 ## <span class="morph" style="--morph-name:a1;">Writing your document</span>
 
 Write your document in the `main.md` file. This file is the main file of your document and will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/)
 
 <!--
+_backgroundImage: url('assets/3x4/violet-dark-wave-4.png')
 _header: Writing
 _footer: https://www.markdownguide.org/basic-syntax/
  -->
 
 ---
 
-![bg](assets/defaults/hex-05.svg)
-
 ## <span class="morph" style="--morph-name:a1;">Writing your document</span>
 
 In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
 
 <!--
+_backgroundImage: url('assets/3x4/purple-dark-wave-5.png')
 _header: Writing
 _footer: https://en.wikibooks.org/wiki/LaTeX
  -->
 
 ---
-
-![bg](assets/defaults/hex-06.svg)
-
-# Compiling
-
-To compile the document just use the Makefile.
-
-```bash
-make			# Renders the main.md and slides.md files to various formats. (Default)
-make document		# Renders the main.md file to a PDF document.
-make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
-make clear		# Deletes all temporary files
-make purge		# Deletes all temporary and output files
-make setup		# Installs the template and all dependencies
-make help		# Shows this help
-```
-
-<!--
-make setup		# Installs the template and all dependencies.  
-make tex		# Renders the main.md file to a LaTeX document.  
-make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.  
-make present	# Starts a live preview of the slides.md file in your browser.  
-make clear		# Deletes all temporary files.
- -->
-
-<!--
-_header: Compiling
- -->
-
----
-
-![bg](assets/defaults/hex-07.svg)
 
 # Installation
 
@@ -164,17 +133,46 @@ Requirements:
  -->
 
 <!--
+_backgroundImage: url('assets/3x4/emerald-dark-blob-6.png')
 _header: Installation
 _transition: fade-out
  -->
 
 ---
 
-![bg brightness:1.5 contrast:1.5](assets/3x4/orange-dark-hex-outline-3.png)
+# Compiling
+
+To compile the document just use the Makefile.
+
+```bash
+make			# Renders the main.md and slides.md files to various formats. (Default)
+make document		# Renders the main.md file to a PDF document.
+make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
+make clear		# Deletes all temporary files
+make purge		# Deletes all temporary and output files
+make setup		# Installs the template and all dependencies
+make help		# Shows this help
+```
+
+<!--
+make setup		# Installs the template and all dependencies.
+make tex		# Renders the main.md file to a LaTeX document.
+make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
+make present	# Starts a live preview of the slides.md file in your browser.
+make clear		# Deletes all temporary files.
+ -->
+
+<!--
+_backgroundImage: url('assets/3x4/teal-dark-blob-7.png')
+_header: Compiling
+ -->
+
+---
 
 # <!-- fit --> Have fun writing! :rocket: :100: :tada:
 
 <!--
+_backgroundImage: url('assets/3x4/fuchsia-dark-poly-outline-8.png')
 _paginate: false
 _color: #ccc
  -->
