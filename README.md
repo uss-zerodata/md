@@ -3,6 +3,8 @@
 One Template to rule them all
 A template for all your markdown needs. Creating beautiful documents written in markdown and rendered using pandoc.
 
+![](examples/example_slides.png)
+
 # Features
 
 - Beautiful title page
