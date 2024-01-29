@@ -3,7 +3,32 @@
 One Template to rule them all
 A template for all your markdown needs. Creating beautiful documents written in markdown and rendered using pandoc.
 
-![](examples/example_slides.png)
+<details>
+<summary>Document Example</summary>
+
+![Document Example](examples/example-document.png)
+
+[Document Example PDF](examples/example-document.pdf)
+
+</details>
+
+<details>
+<summary>Slides Example (Dark)</summary>
+
+![Dark Slides Example](examples/example-slides_dark.png)
+
+[Dark Slides Example PDF](examples/example-slides_dark.pdf)
+
+</details>
+
+<details>
+<summary>Slides Example (Light)</summary>
+
+![Light Slides Example](examples/example-slides_light.png)
+
+[Light Slides Example PDF](examples/example-slides_light.pdf)
+
+</details>
 
 # Features
 
@@ -44,6 +69,9 @@ To automatically install all dependencies use the Makefile.
 make setup
 ```
 
+<details>
+<summary>Reccomended Editor</summary>
+
 For editing, we recommend using [Visual Studio Code](https://code.visualstudio.com/). It is a free and open source text editor, that can be customized with extensions to fit your needs. We recommend the following extensions.
 
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
@@ -56,6 +84,8 @@ For editing, we recommend using [Visual Studio Code](https://code.visualstudio.c
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
+</details>
+
 ## Windows
 
 If you are using Windows you can use [Chocolatey](https://chocolatey.org/)\cite{choco_chocolatey_nodate} to install the dependencies through the command line. If you don't have Chocolatey installed already, you can install it by following the instructions on the [Chocolatey website](https://chocolatey.org/install)\cite{choco_chocolatey_nodate}.
@@ -66,6 +96,9 @@ choco install pandoc miktex strawberryperl make nodejs
 npm install
 ```
 
+<details>
+<summary>Manual Installation</summary>
+
 It is also possible to install the dependencies manually.
 
 - [Pandoc](https://pandoc.org/installing.html)\cite{pandoc_pandoc_nodate}
@@ -73,6 +106,8 @@ It is also possible to install the dependencies manually.
 - [Strawberry Perl](http://strawberryperl.com/)\cite{perl_strawberry_nodate}
 - [Make](http://gnuwin32.sourceforge.net/packages/make.htm)\cite{gnuwin_make_nodate}
 - [Node.js](https://nodejs.org/en/download/)
+
+</details>
 
 ## Linux
 
@@ -85,6 +120,9 @@ sudo apt-get install pandoc texlive-full perl make nodejs
 npm install
 ```
 
+<details>
+<summary>Manual Installation</summary>
+
 It is also possible to install the dependencies manually.
 
 - [Pandoc](https://pandoc.org/installing.html)\cite{pandoc_pandoc_nodate}
@@ -93,7 +131,12 @@ It is also possible to install the dependencies manually.
 - [Make](https://www.gnu.org/software/make/)\cite{gnu_make_nodate}
 - [Node.js](https://nodejs.org/en/download/)
 
+</details>
+
 # Customization
+
+<details>
+<summary>Pandoc Options</summary>
 
 ## Pandoc Options
 
@@ -123,6 +166,11 @@ pandoc -o output.pdf .main.md --template assets/eisvogel.tex --listings --toc --
 - `--top-level-division=chapter`: use chapters instead of sections
 - `--toc`: generate table of contents
 - `--toc-depth 2`: set depth of table of contents to 2
+
+</details>
+
+<details>
+<summary>Template Variables</summary>
 
 ## Template Variables
 
@@ -260,6 +308,8 @@ You can customize the template by changing the front matter of the `main.md` fil
 - `code-block-font-size` (defaults to `\small`)
 
   LaTeX command to change the font size for code blocks. The available values are `\tiny`, `\scriptsize`, `\footnotesize`, `\small`, `\normalsize`, `\large`, `\Large`, `\LARGE`, `\huge` and `\Huge`. This option will change the font size for default code blocks using the verbatim environment and for code blocks generated with listings.
+
+</details>
 
 # Credits
 
