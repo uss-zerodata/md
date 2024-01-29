@@ -40,7 +40,7 @@ style: |
   }
 ---
 
-![bg left:40% 80% invert](https://vectorified.com/images/fingerprint-icon-png-9.png)
+![bg left:40% 80% invert](assets/fingerprint-icon.png)
 
 # Markdown
 
