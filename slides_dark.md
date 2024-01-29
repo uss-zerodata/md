@@ -28,10 +28,7 @@ style: |
     border-radius: 0.15rem;
   }
   marp-pre, td, th {
-    background-color: #001220;
-  }
-  img{
-    fill-opacity: 0.1;
+    background-color: #080808;
   }
 
   /* Define the style of "morph" class */
@@ -173,5 +170,4 @@ _header: Compiling
 <!--
 _backgroundImage: url('assets/3x4/darker/fuchsia-poly-outline-8.png')
 _paginate: false
-_color: #ccc
  -->
