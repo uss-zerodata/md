@@ -3,6 +3,7 @@ marp: true
 theme: default
 paginate: true
 backgroundColor: #fff
+backgroundImage: url('assets/3x4/light/blue-hex-outline-0.png')
 transition: fade
 
 style: |
@@ -33,6 +34,10 @@ style: |
   img{
     fill-opacity: 0.1;
   }
+  section {
+    background-opacity: 0.5;
+    background-brightness: 0.5;
+  }
 
   /* Define the style of "morph" class */
   .morph {
@@ -43,7 +48,7 @@ style: |
   }
 ---
 
-![bg left:40% 80% opacity:0.8](https://vectorified.com/images/fingerprint-icon-png-9.png)
+![bg left:40% 80% contrast:0.8](https://vectorified.com/images/fingerprint-icon-png-9.png)
 
 # Markdown
 
@@ -52,6 +57,7 @@ One Template to rule them all
 <small>A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.</small>
 
 <!--
+_backgroundImage: url('assets/3x4/light/blue-hex-outline-0.png')
 _paginate: false
 _transition: fade-out
  -->
@@ -65,7 +71,7 @@ _transition: fade-out
 A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 <!--
-_backgroundImage: url('assets/3x4/blue-light-hex-outline-2.png')
+_backgroundImage: url('assets/3x4/light/blue-hex-outline-2.png')
 _header: Introduction
  -->
 
@@ -83,7 +89,7 @@ _header: Introduction
 - Easy to extend
 
 <!--
-_backgroundImage: url('assets/3x4/blue-light-hex-outline-3.png')
+_backgroundImage: url('assets/3x4/light/blue-hex-outline-3.png')
 _header: Features
  -->
 
@@ -94,7 +100,7 @@ _header: Features
 Write your document in the `main.md` file. This file is the main file of your document and will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/)
 
 <!--
-_backgroundImage: url('assets/3x4/violet-light-wave-4.png')
+_backgroundImage: url('assets/3x4/light/violet-wave-4.png')
 _header: Writing
 _footer: https://www.markdownguide.org/basic-syntax/
  -->
@@ -106,7 +112,7 @@ _footer: https://www.markdownguide.org/basic-syntax/
 In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
 
 <!--
-_backgroundImage: url('assets/3x4/purple-light-wave-5.png')
+_backgroundImage: url('assets/3x4/light/purple-wave-5.png')
 _header: Writing
 _footer: https://en.wikibooks.org/wiki/LaTeX
  -->
@@ -131,7 +137,7 @@ Requirements:
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/emerald-light-blob-6.png')
+_backgroundImage: url('assets/3x4/light/emerald-blob-6.png')
 _header: Installation
 _transition: fade-out
  -->
@@ -161,7 +167,7 @@ make clear		# Deletes all temporary files.
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/teal-light-blob-7.png')
+_backgroundImage: url('assets/3x4/light/teal-blob-7.png')
 _header: Compiling
  -->
 
@@ -170,7 +176,7 @@ _header: Compiling
 # <!-- fit --> Have fun writing! :rocket: :100: :tada:
 
 <!--
-_backgroundImage: url('assets/3x4/fuchsia-light-poly-outline-8.png')
+_backgroundImage: url('assets/3x4/light/fuchsia-poly-outline-8.png')
 _paginate: false
 _color: #ccc
  -->

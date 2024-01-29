@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 backgroundColor: #001220
-backgroundImage: url('assets/3x4/blue-dark-hex-outline-1.png')
+backgroundImage: url('assets/3x4/darker/blue-hex-0.png')
 transition: fade
 
 style: |
@@ -53,7 +53,7 @@ One Template to rule them all
 <small>A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.</small>
 
 <!--
-_backgroundImage: url('assets/3x4/blue-dark-hex-1.png')
+_backgroundImage: url('assets/3x4/darker/blue-hex-0.png')
 _paginate: false
 _transition: fade-out
  -->
@@ -67,7 +67,7 @@ _transition: fade-out
 A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 <!--
-_backgroundImage: url('assets/3x4/blue-dark-hex-outline-2.png')
+_backgroundImage: url('assets/3x4/darker/blue-hex-outline-2.png')
 _header: Introduction
  -->
 
@@ -85,7 +85,7 @@ _header: Introduction
 - Easy to extend
 
 <!--
-_backgroundImage: url('assets/3x4/blue-dark-hex-outline-3.png')
+_backgroundImage: url('assets/3x4/darker/blue-hex-outline-3.png')
 _header: Features
  -->
 
@@ -96,7 +96,7 @@ _header: Features
 Write your document in the `main.md` file. This file is the main file of your document and will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/)
 
 <!--
-_backgroundImage: url('assets/3x4/violet-dark-wave-4.png')
+_backgroundImage: url('assets/3x4/darker/violet-wave-4.png')
 _header: Writing
 _footer: https://www.markdownguide.org/basic-syntax/
  -->
@@ -108,7 +108,7 @@ _footer: https://www.markdownguide.org/basic-syntax/
 In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
 
 <!--
-_backgroundImage: url('assets/3x4/purple-dark-wave-5.png')
+_backgroundImage: url('assets/3x4/darker/purple-wave-5.png')
 _header: Writing
 _footer: https://en.wikibooks.org/wiki/LaTeX
  -->
@@ -133,7 +133,7 @@ Requirements:
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/emerald-dark-blob-6.png')
+_backgroundImage: url('assets/3x4/darker/emerald-blob-6.png')
 _header: Installation
 _transition: fade-out
  -->
@@ -163,7 +163,7 @@ make clear		# Deletes all temporary files.
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/teal-dark-blob-7.png')
+_backgroundImage: url('assets/3x4/darker/teal-blob-7.png')
 _header: Compiling
  -->
 
@@ -172,7 +172,7 @@ _header: Compiling
 # <!-- fit --> Have fun writing! :rocket: :100: :tada:
 
 <!--
-_backgroundImage: url('assets/3x4/fuchsia-dark-poly-outline-8.png')
+_backgroundImage: url('assets/3x4/darker/fuchsia-poly-outline-8.png')
 _paginate: false
 _color: #ccc
  -->
