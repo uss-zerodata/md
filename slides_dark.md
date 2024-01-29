@@ -2,8 +2,7 @@
 marp: true
 theme: default
 paginate: true
-backgroundColor: #001220
-backgroundImage: url('assets/3x4/darker/blue-hex-0.png')
+backgroundColor: #000
 transition: fade
 
 style: |

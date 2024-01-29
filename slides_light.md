@@ -3,7 +3,6 @@ marp: true
 theme: default
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('assets/3x4/light/blue-hex-outline-0.png')
 transition: fade
 
 style: |
@@ -178,5 +177,4 @@ _header: Compiling
 <!--
 _backgroundImage: url('assets/3x4/light/fuchsia-poly-outline-8.png')
 _paginate: false
-_color: #ccc
  -->
