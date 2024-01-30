@@ -4,10 +4,10 @@ theme: default
 paginate: true
 backgroundColor: #000
 transition: fade
-
+color: #eee
 style: |
-  p, a, h1, h2, h3, h4, h5, h6, li, ul, ol, blockquote, code, pre, table, tr, td, th, em, strong, b, i, img, div, span, footer, header {
-    color: #eee
+  table, tr, td, th, marp-pre code { 
+    color: #eee;
   }
   li {
     font-size: 0.95rem;
@@ -15,7 +15,7 @@ style: |
   footer, header, section::after {
     color: #bbb;
   }
-  muted {
+  muted, a {
     color: #bbb;
   }
   small, .small {

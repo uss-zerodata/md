@@ -4,10 +4,10 @@ theme: default
 paginate: true
 backgroundColor: #fff
 transition: fade
-
+color: #000
 style: |
-  p, a, h1, h2, h3, h4, h5, h6, li, ul, ol, blockquote, code, pre, table, tr, td, th, em, strong, b, i, img, div, span, footer, header {
-    color: #000;
+  table, tr, td, th, marp-pre code{
+    color: #eee;
   }
   li {
     font-size: 0.95rem;
@@ -15,7 +15,7 @@ style: |
   footer, header, section::after {
     color: #222;
   }
-  muted {
+  muted, a {
     color: #222;
   }
   small, .small {
@@ -28,7 +28,7 @@ style: |
     border-radius: 0.15rem;
   }
   marp-pre, td, th {
-    background-color: #fafafa;
+    background-color: #080808;
   }
 
   /* Define the style of "morph" class */
