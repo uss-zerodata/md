@@ -2,10 +2,13 @@
 title: Markdown
 subtitle: One Template to rule them all
 desc: "A template for all your markdown needs. Creating beautiful documents and slides by only using markdown."
-subject: "Markdown"
-date: "01.01.2024"
+course: "Markdown"
+semester: ""
 author: [github.com/uss-zerodata]
-institute: ""
+institute: []
+date: "01.01.2024"
+
+subject: "Markdown"
 keywords:
   [
 	Markdown,
@@ -55,7 +58,7 @@ Write your document in the `main.md` file. Then compile it using the Makefile. Y
 
 In addition to the markdown syntax you can also use LaTeX commands in your document. For example you can use `\newpage` to enforce a page break or `\cite` to quote a source from a bibliography file. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX) or the [LaTeX cheat-sheet](https://wch.github.io/latexsheet/).
 
-Presentations can be created in the `slides.md`. In contrast to the main document, it does not support LaTeX commands. But you can use all Markdown features in combination with CSS. 
+Presentations can be created in the `slides.md`. In contrast to the main document, it does not support LaTeX commands. But you can use all Markdown features in combination with CSS.
 
 ## Compiling
 
