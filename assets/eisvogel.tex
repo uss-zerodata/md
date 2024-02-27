@@ -945,10 +945,10 @@ $if(titlepage-background)$
 {
   \setstretch{2}
   \vfill
-  \vskip -8em
+  \vskip -8.0em
   \noindent {\huge \textbf{\textsf{$title$}}}
   $if(subtitle)$
-  \vskip 1em
+  \vskip 1.0em
   {\Large \textsf{$subtitle$}}
   $endif$
 
@@ -956,16 +956,18 @@ $if(titlepage-background)$
   \vskip 0.5em
   {\large \textsf{$desc$}}
   $endif$
-  \vskip 3em
+
+  \vskip 3.0em
   \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$}}
-  
+
   $if(institute)$
-  \vskip 0.25em
-  {\Large \textsf{$institute$}}
+  \vskip 0.5em
+  \noindent {\large \textsf{$for(institute)$$institute$ \\ $endfor$}}
+  \vskip 1.0em
   $endif$
 
-  \vskip 0.25em
   {\Large {$date$}}
+
   \vfill
 }
 $else$
