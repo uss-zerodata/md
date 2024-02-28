@@ -17,6 +17,10 @@ keywords:
   ]
 lang: "en"
 
+# fontsize: 12pt
+# linestretch: 1.5
+# fontfamily: "times"
+
 titlepage: true,
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
