@@ -49,7 +49,7 @@ One Template to rule them all
 <small>A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.</small>
 
 <!--
-_backgroundImage: url('assets/3x4/hex-outline_blue_800_hc_invert_0.svg')
+_backgroundImage: url('assets/3x4/hex_blue_900_invert_0.svg')
 _paginate: false
 _transition: fade-out
  -->
@@ -159,7 +159,7 @@ make clear		# Deletes all temporary files.
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/blob_teal_700_invert_0.svg')
+_backgroundImage: url('assets/3x4/blob_teal_700_0.svg')
 _header: Compiling
  -->
 

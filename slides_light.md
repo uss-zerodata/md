@@ -63,7 +63,7 @@ _transition: fade-out
 A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 <!--
-_backgroundImage: url('assets/3x4/hex-outline_blue_200_1.svg')
+_backgroundImage: url('assets/3x4/hex-outline_blue_100_1.svg')
 _header: Introduction
  -->
 
@@ -81,7 +81,7 @@ _header: Introduction
 - Easy to extend
 
 <!--
-_backgroundImage: url('assets/3x4/hex-outline_blue_200_2.svg')
+_backgroundImage: url('assets/3x4/hex-outline_blue_100_hc_2.svg')
 _header: Features
  -->
 
@@ -129,7 +129,7 @@ Requirements:
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/blob_emerald_100_invert_0.svg')
+_backgroundImage: url('assets/3x4/blob_emerald_50_invert_0.svg')
 _header: Installation
 _transition: fade-out
  -->
@@ -159,7 +159,7 @@ make clear		# Deletes all temporary files.
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/blob_teal_100_invert_0.svg')
+_backgroundImage: url('assets/3x4/blob_teal_50_invert_0.svg')
 _header: Compiling
  -->
 
