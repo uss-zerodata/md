@@ -41,7 +41,7 @@ def copy(source_folder, dest_folder, base_color, replace_instructions, inverted=
 				for old_color, new_color in replace_instructions.items():
 					content = content.replace(old_color, TAILWIND_COLORS[color][new_color])
 				if inverted:
-					new_file_name = f'{source_folder}_{color}_{base_color}{"_"+marker if marker else ""}_inverted_{id}.svg'
+					new_file_name = f'{source_folder}_{color}_{base_color}{"_"+marker if marker else ""}_invert_{id}.svg'
 				else:
 					new_file_name = f'{source_folder}_{color}_{base_color}{"_"+marker if marker else ""}_{id}.svg'
 				with open(f'{dest_folder}/{new_file_name}', 'w') as new_file:
