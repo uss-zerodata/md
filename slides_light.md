@@ -40,7 +40,7 @@ style: |
   }
 ---
 
-![bg left:40% 80% contrast:0.8](assets/fingerprint-icon.png)
+![bg left:40% 80%](assets/fingerprint-icon.png)
 
 # Markdown
 
@@ -49,7 +49,7 @@ One Template to rule them all
 <small>A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.</small>
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/blue-hex-outline-0.png')
+_backgroundImage: url('assets/3x4/hex-outline_blue_200_hc_0.svg')
 _paginate: false
 _transition: fade-out
  -->
@@ -63,7 +63,7 @@ _transition: fade-out
 A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/blue-hex-outline-2.png')
+_backgroundImage: url('assets/3x4/hex-outline_blue_200_1.svg')
 _header: Introduction
  -->
 
@@ -81,7 +81,7 @@ _header: Introduction
 - Easy to extend
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/blue-hex-outline-3.png')
+_backgroundImage: url('assets/3x4/hex-outline_blue_200_2.svg')
 _header: Features
  -->
 
@@ -92,7 +92,7 @@ _header: Features
 Write your document in the `main.md` file. This file is the main file of your document and will be compiled to the final document using the Makefile. You can use all features of markdown in this file. For a detailed description of the markdown syntax see the [markdown guide](https://www.markdownguide.org/basic-syntax/)
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/violet-wave-4.png')
+_backgroundImage: url('assets/3x4/wave_violet_100_0.svg')
 _header: Writing
 _footer: https://www.markdownguide.org/basic-syntax/
  -->
@@ -104,7 +104,7 @@ _footer: https://www.markdownguide.org/basic-syntax/
 In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/purple-wave-5.png')
+_backgroundImage: url('assets/3x4/wave_purple_100_0.svg')
 _header: Writing
 _footer: https://en.wikibooks.org/wiki/LaTeX
  -->
@@ -129,7 +129,7 @@ Requirements:
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/emerald-blob-6.png')
+_backgroundImage: url('assets/3x4/blob_emerald_100_invert_0.svg')
 _header: Installation
 _transition: fade-out
  -->
@@ -159,7 +159,7 @@ make clear		# Deletes all temporary files.
  -->
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/teal-blob-7.png')
+_backgroundImage: url('assets/3x4/blob_teal_100_invert_0.svg')
 _header: Compiling
  -->
 
@@ -168,6 +168,6 @@ _header: Compiling
 # <!-- fit --> Have fun writing! :rocket: :100: :tada:
 
 <!--
-_backgroundImage: url('assets/3x4/lighter/fuchsia-poly-outline-8.png')
+_backgroundImage: url('assets/3x4/poly-outline_sky_200_0.svg')
 _paginate: false
  -->
