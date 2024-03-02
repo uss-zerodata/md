@@ -49,7 +49,7 @@ One Template to rule them all
 <small>A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.</small>
 
 <!--
-_backgroundImage: url('assets/3x4/hex-outline_blue_200_hc_0.svg')
+_backgroundImage: url('assets/3x4/hex-outline_sky_50_hc_0.svg')
 _paginate: false
 _transition: fade-out
  -->
@@ -63,7 +63,7 @@ _transition: fade-out
 A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
 
 <!--
-_backgroundImage: url('assets/3x4/hex-outline_blue_100_1.svg')
+_backgroundImage: url('assets/3x4/hex-outline_sky_50_hc_1.svg')
 _header: Introduction
  -->
 
@@ -81,7 +81,7 @@ _header: Introduction
 - Easy to extend
 
 <!--
-_backgroundImage: url('assets/3x4/hex-outline_blue_100_hc_2.svg')
+_backgroundImage: url('assets/3x4/hex-outline_sky_50_hc_2.svg')
 _header: Features
  -->
 
@@ -104,7 +104,7 @@ _footer: https://www.markdownguide.org/basic-syntax/
 In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
 
 <!--
-_backgroundImage: url('assets/3x4/wave_purple_100_0.svg')
+_backgroundImage: url('assets/3x4/wave_amber_50_0.svg')
 _header: Writing
 _footer: https://en.wikibooks.org/wiki/LaTeX
  -->
@@ -168,6 +168,6 @@ _header: Compiling
 # <!-- fit --> Have fun writing! :rocket: :100: :tada:
 
 <!--
-_backgroundImage: url('assets/3x4/poly-outline_sky_200_0.svg')
+_backgroundImage: url('assets/3x4/poly-outline_sky_100_0.svg')
 _paginate: false
  -->

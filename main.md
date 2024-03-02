@@ -2,7 +2,7 @@
 title: Markdown
 subtitle: One Template to rule them all
 desc: "A template for all your markdown needs. Creating beautiful documents and slides by only using markdown."
-course: "Markdown"
+course: ""
 semester: ""
 author: [github.com/uss-zerodata]
 institute: []
