@@ -6,7 +6,7 @@ import os
 import yaml
 
 
-DEST_FOLDER = 'output'
+DEST_FOLDER = '../'
 
 TAILWIND_COLORS = None
 REPLACE_INSTRUCTIONS = None
