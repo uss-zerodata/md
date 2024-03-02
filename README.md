@@ -45,7 +45,7 @@ Write your document in the `main.md` file. Then compile it using the Makefile. Y
 
 In addition to the markdown syntax you can also use LaTeX commands in your document. For example you can use `\newpage` to enforce a page break or `\cite` to quote a source from a bibliography file. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX) or the [LaTeX cheat-sheet](https://wch.github.io/latexsheet/).
 
-Presentations can be created in the `slides.md`. In contrast to the main document, it does not support LaTeX commands. But you can use all Markdown features in combination with CSS. 
+Presentations can be created in the `slides.md`. In contrast to the main document, it does not support LaTeX commands. But you can use all Markdown features in combination with CSS.
 
 ## Compiling
 
@@ -94,6 +94,10 @@ If you are using Windows you can use [Chocolatey](https://chocolatey.org/)\cite{
 # Chocolatey
 choco install pandoc miktex strawberryperl make nodejs
 npm install
+
+# Unzip assets
+unzip -o assets/ assets/a4.zip
+unzip -o assets/ assets/3x4.zip
 ```
 
 <details>
@@ -118,6 +122,10 @@ If you are using Linux you can use the package manager of your distribution to i
 sudo apt update
 sudo apt-get install pandoc texlive-full perl make nodejs
 npm install
+
+# unzip assets
+unzip -o assets/ assets/a4.zip
+unzip -o assets/ assets/3x4.zip
 ```
 
 <details>

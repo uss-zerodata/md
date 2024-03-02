@@ -108,6 +108,10 @@ If you are using Windows you can use [Chocolatey](https://chocolatey.org/)\cite{
 # Chocolatey
 choco install pandoc miktex strawberryperl make nodejs
 npm install
+
+# unzip assets
+unzip -o assets/ assets/a4.zip
+unzip -o assets/ assets/3x4.zip
 ```
 
 It is also possible to install the dependencies manually.
@@ -127,6 +131,10 @@ If you are using Linux you can use the package manager of your distribution to i
 sudo apt update
 sudo apt-get install pandoc texlive-full perl make nodejs
 npm install
+
+# unzip assets
+unzip -o assets/ assets/a4.zip
+unzip -o assets/ assets/3x4.zip
 ```
 
 It is also possible to install the dependencies manually.
