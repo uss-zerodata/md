@@ -6,80 +6,80 @@ import os
 import yaml
 
 
-DEST_FOLDER = '../3x4/'
+def load_colors(config_path = 'tailwind_colors.yml'):
+	# Load the color dictionary
+	with open(config_path) as config_file:
+		return yaml.load(config_file, Loader=yaml.FullLoader)
 
-TAILWIND_COLORS = None
-REPLACE_INSTRUCTIONS = None
+def load_generator(config_path = 'generator_config.yml'):
+	# Load the generator
+	with open(config_path) as config_file:
+		return yaml.load(config_file, Loader=yaml.FullLoader)
+
+def create_folder(path = 'textures/'):
+	# Create folder if it doesn't exist
+	if not os.path.exists(path):
+		os.makedirs(path)
+	return path
 
 
-# Load the color dictionary
-with open('tailwind_colors.yml') as file:
-	TAILWIND_COLORS = yaml.load(file, Loader=yaml.FullLoader)
+def read_file(file_path):
+	# Open the file and read its content
+	with open(file_path, 'r') as file:
+		return file.read()
+
+def write_file(file_path, content):
+	# Write the content to the file
+	with open(file_path, 'w') as file:
+		file.write(content)
 
 
-# Create the destination folder if it doesn't exist
-if not os.path.exists(DEST_FOLDER):
-	os.makedirs(DEST_FOLDER)
+def iter_files(source_folder):
+	# Iterate through all files in the source folder
+	for file_path in os.listdir(source_folder):
+		yield file_path, read_file(f'{source_folder}/{file_path}')
+
+def replace_colors(content, old_color, color, brightness = None, colors = None):
+	# Replace the colors in the content
+	
+	print(f'old_color: {old_color} color: {color} brightness: {brightness}')
+	if isinstance(brightness, str) and brightness.startswith('#'):
+		print(f"replacing {old_color} with {brightness}")
+		return content.replace(old_color, brightness)
+	else:
+		print(f"replacing {old_color} with {colors[color][brightness]}")
+		return content.replace(old_color, colors[color][brightness])
+
+def generate_file_name(texture, color, brightness, contrast, mode, id):
+	# Generate the file name
+	return f'{texture}_{color}_{brightness}_{contrast}_{mode}_{id}.svg'
 
 
-def copy(source_folder, dest_folder, base_color, replace_instructions, inverted=False, marker=""):
-	# Create the destination folder if it doesn't exist
-	if not os.path.exists(dest_folder):
-		os.makedirs(dest_folder)
+def follow_generator(generator, colors, dest_folder):
+	for texture in generator:
+		for mode in generator[texture]:
+			for contrast in generator[texture][mode]:
+				for file_name, content in iter_files(texture):
+					for brightness in generator[texture][mode][contrast]:
+						for color in colors:
+							# Replace all colors in instructions
+							for old_color in generator[texture][mode][contrast][brightness]:
+								content = replace_colors(content, old_color, color, generator[texture][mode][contrast][brightness][old_color], colors)
+							
+							# Generate the file name
+							file_name = generate_file_name(texture, color, brightness, contrast, mode, file_name.split('.')[0])
 
-	print(f'Processing{" "+marker if marker else ""}{" inverted" if inverted else ""} {source_folder} with base color {base_color}')
+							# Write the file
+							write_file(f'{dest_folder}/{file_name}', content)
 
-	# Iterate through all Tailwind colors
-	for color in TAILWIND_COLORS:
-		# print(f'Processing{" inverted" if inverted else ""} {source_folder} with base color {base_color} and Tailwind color {color}')
-		# Copy the source file to the destination folder and replace the colors
-		for filename in os.listdir(source_folder):
-			id = filename.split('-')[1].split('.')[0]
-			# Open the source file and read its content
-			with open(f'{source_folder}/{filename}', 'r') as file:
-				content = file.read()
-				for old_color, new_color in replace_instructions.items():
-					content = content.replace(old_color, TAILWIND_COLORS[color][new_color])
-				if inverted:
-					new_file_name = f'{source_folder}_{color}_{base_color}{"_"+marker if marker else ""}_invert_{id}.svg'
-				else:
-					new_file_name = f'{source_folder}_{color}_{base_color}{"_"+marker if marker else ""}_{id}.svg'
-				with open(f'{dest_folder}/{new_file_name}', 'w') as new_file:
-					new_file.write(content)
+
+def main():
+	dest_folder = create_folder("3x4/")
+	colors = load_colors("tailwind_colors.yml")
+	generator = load_generator("generator_config.yml")
+
+	follow_generator(generator, colors, dest_folder)
 
 
 if __name__ == '__main__':
-
-	# Load the replace instructions
-	with open('replace_instructions.yml') as file:
-		REPLACE_INSTRUCTIONS = yaml.load(file, Loader=yaml.FullLoader)
-
-	# Iterate through all instruction sets
-	for source_folder in REPLACE_INSTRUCTIONS:
-		print(f'Processing source folder {source_folder}')
-
-		default = REPLACE_INSTRUCTIONS[source_folder]['default']
-		inverted = REPLACE_INSTRUCTIONS[source_folder]['inverted']
-
-		for base_color in default:
-			copy(source_folder, DEST_FOLDER, base_color, default[base_color], False, "")
-
-		for base_color in inverted:
-			copy(source_folder, DEST_FOLDER, base_color, inverted[base_color], True, "")
-
-		# Load the replace instructions
-	with open('replace_instructions_high-contrast.yml') as file:
-		REPLACE_INSTRUCTIONS = yaml.load(file, Loader=yaml.FullLoader)
-
-	# Iterate through all instruction sets
-	for source_folder in REPLACE_INSTRUCTIONS:
-		print(f'Processing source folder {source_folder}')
-
-		default = REPLACE_INSTRUCTIONS[source_folder]['default']
-		inverted = REPLACE_INSTRUCTIONS[source_folder]['inverted']
-
-		for base_color in default:
-			copy(source_folder, DEST_FOLDER, base_color, default[base_color], False, "hc")
-
-		for base_color in inverted:
-			copy(source_folder, DEST_FOLDER, base_color, inverted[base_color], True, "hc")
+	main()
