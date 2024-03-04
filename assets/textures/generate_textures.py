@@ -5,6 +5,8 @@ This script copies svg texture files from the source folder to the destination f
 import os
 import yaml
 
+from time import sleep
+
 
 def load_colors(config_path = 'tailwind_colors.yml'):
 	# Load the color dictionary
@@ -41,36 +43,52 @@ def iter_files(source_folder):
 
 def replace_colors(content, old_color, color, brightness = None, colors = None):
 	# Replace the colors in the content
-	
-	print(f'old_color: {old_color} color: {color} brightness: {brightness}')
 	if isinstance(brightness, str) and brightness.startswith('#'):
-		print(f"replacing {old_color} with {brightness}")
 		return content.replace(old_color, brightness)
 	else:
-		print(f"replacing {old_color} with {colors[color][brightness]}")
 		return content.replace(old_color, colors[color][brightness])
 
 def generate_file_name(texture, color, brightness, contrast, mode, id):
-	# Generate the file name
-	return f'{texture}_{color}_{brightness}_{contrast}_{mode}_{id}.svg'
+	new_file_name = f'{texture}'
+	if color != 'default':
+		new_file_name += f'_{color}'
+	if brightness != 'default':
+		new_file_name += f'_{brightness}'
+	if contrast != 'default':
+		new_file_name += f'_{contrast}'
+	if mode != 'default':
+		new_file_name += f'_{mode}'
+	new_file_name += f'_{id}.svg'
+	return new_file_name
 
+def new_segment(texture):
+	# wait for user confirmation
+	print(f'Starting with texture: {texture}')
+	# if input('Press Enter to continue...') != '':
+	# 	print('Exiting...')
+	# 	exit()
 
 def follow_generator(generator, colors, dest_folder):
 	for texture in generator:
+		new_segment(texture)
 		for mode in generator[texture]:
+			print(f'Generating {texture} {mode}...')
 			for contrast in generator[texture][mode]:
 				for file_name, content in iter_files(texture):
 					for brightness in generator[texture][mode][contrast]:
 						for color in colors:
+							# Copy the content
+							new_content = content
+
 							# Replace all colors in instructions
 							for old_color in generator[texture][mode][contrast][brightness]:
-								content = replace_colors(content, old_color, color, generator[texture][mode][contrast][brightness][old_color], colors)
+								new_content = replace_colors(new_content, old_color, color, generator[texture][mode][contrast][brightness][old_color], colors)
 							
 							# Generate the file name
-							file_name = generate_file_name(texture, color, brightness, contrast, mode, file_name.split('.')[0])
+							new_file_name = generate_file_name(texture, color, brightness, contrast, mode, file_name.split('.')[0])
 
 							# Write the file
-							write_file(f'{dest_folder}/{file_name}', content)
+							write_file(f'{dest_folder}/{new_file_name}', new_content)
 
 
 def main():
@@ -82,4 +100,7 @@ def main():
 
 
 if __name__ == '__main__':
-	main()
+	try:
+		main()
+	except KeyboardInterrupt:
+		print("\nExiting...")
