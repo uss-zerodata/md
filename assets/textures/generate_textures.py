@@ -92,7 +92,7 @@ def follow_generator(generator, colors, dest_folder):
 
 
 def main():
-	dest_folder = create_folder("3x4/")
+	dest_folder = create_folder("../3x2/")
 	colors = load_colors("tailwind_colors.yml")
 	generator = load_generator("generator_config.yml")
 
