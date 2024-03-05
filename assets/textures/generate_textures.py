@@ -54,10 +54,10 @@ def generate_file_name(texture, color, brightness, contrast, mode, id):
 		new_file_name += f'_{color}'
 	if brightness != 'default':
 		new_file_name += f'_{brightness}'
-	if contrast != 'default':
-		new_file_name += f'_{contrast}'
 	if mode != 'default':
 		new_file_name += f'_{mode}'
+	if contrast != 'default':
+		new_file_name += f'_{contrast}'
 	new_file_name += f'_{id}.svg'
 	return new_file_name
 
