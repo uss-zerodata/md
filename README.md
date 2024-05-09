@@ -88,16 +88,19 @@ For editing, we recommend using [Visual Studio Code](https://code.visualstudio.c
 
 ## Windows
 
-If you are using Windows you can use [Chocolatey](https://chocolatey.org/)\cite{choco_chocolatey_nodate} to install the dependencies through the command line. If you don't have Chocolatey installed already, you can install it by following the instructions on the [Chocolatey website](https://chocolatey.org/install)\cite{choco_chocolatey_nodate}.
+If you are using Windows you can use [Chocolatey](https://chocolatey.org/) to install the dependencies through the command line. If you don't have Chocolatey installed already, you can install it by following the instructions on the [Chocolatey website](https://chocolatey.org/install).
 
 ```bash
 # Chocolatey
-choco install pandoc miktex strawberryperl make nodejs
+choco install pandoc miktex strawberryperl make nodejs python3
 npm install
 
-# Unzip assets
+# Unzip document backgrounds
 unzip -o assets/ assets/a4.zip
-unzip -o assets/ assets/3x4.zip
+
+# Generate slide backgrounds
+cd assets/textures
+python3 generate_textures.py
 ```
 
 <details>
@@ -105,11 +108,12 @@ unzip -o assets/ assets/3x4.zip
 
 It is also possible to install the dependencies manually.
 
-- [Pandoc](https://pandoc.org/installing.html)\cite{pandoc_pandoc_nodate}
-- [MiKTeX](https://miktex.org/download)\cite{miktex_getting_nodate}
-- [Strawberry Perl](http://strawberryperl.com/)\cite{perl_strawberry_nodate}
-- [Make](http://gnuwin32.sourceforge.net/packages/make.htm)\cite{gnuwin_make_nodate}
+- [Pandoc](https://pandoc.org/installing.html)
+- [MiKTeX](https://miktex.org/download)
+- [Strawberry Perl](http://strawberryperl.com/)
+- [Make](http://gnuwin32.sourceforge.net/packages/make.htm)
 - [Node.js](https://nodejs.org/en/download/)
+- [Python 3](https://www.python.org/downloads/)
 
 </details>
 
@@ -120,12 +124,15 @@ If you are using Linux you can use the package manager of your distribution to i
 ```bash
 # Debian/Ubuntu
 sudo apt update
-sudo apt-get install pandoc texlive-full perl make nodejs
+sudo apt-get install pandoc texlive-full perl make nodejs python3
 npm install
 
-# unzip assets
+# Unzip document backgrounds
 unzip -o assets/ assets/a4.zip
-unzip -o assets/ assets/3x4.zip
+
+# Generate slide backgrounds
+cd assets/textures
+python3 generate_textures.py
 ```
 
 <details>
@@ -133,11 +140,12 @@ unzip -o assets/ assets/3x4.zip
 
 It is also possible to install the dependencies manually.
 
-- [Pandoc](https://pandoc.org/installing.html)\cite{pandoc_pandoc_nodate}
-- [TeX Live](https://www.tug.org/texlive/)\cite{texlive_tex_nodate}
-- [Perl](https://www.perl.org/get.html)\cite{perl_perl_nodate}
-- [Make](https://www.gnu.org/software/make/)\cite{gnu_make_nodate}
+- [Pandoc](https://pandoc.org/installing.html)
+- [TeX Live](https://www.tug.org/texlive/)
+- [Perl](https://www.perl.org/get.html)
+- [Make](https://www.gnu.org/software/make/)
 - [Node.js](https://nodejs.org/en/download/)
+- [Python 3](https://www.python.org/downloads/)
 
 </details>
 

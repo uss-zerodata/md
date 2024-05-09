@@ -6,8 +6,8 @@ backgroundColor: #fff
 transition: fade
 color: #000
 style: |
-  table, tr, td, th, marp-pre code{
-    color: #eee;
+  table, tr, td, th, marp-pre code {
+    color: #111;
   }
   li {
     font-size: 0.95rem;
@@ -28,15 +28,34 @@ style: |
     border-radius: 0.15rem;
   }
   marp-pre, td, th {
-    background-color: #080808;
+    background-color: #f9fefd;
   }
-
+  .collumns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .center {
+     margin: auto 0;
+  }
+  .gap {
+    margin-top: 1rem;
+  }
   /* Define the style of "morph" class */
   .morph {
     display: inline-block;
     view-transition-name: var(--morph-name);
     contain: layout;
     vertical-align: top;
+  }
+  footer {
+    bottom: 0;
+    left: 0;
+    padding: 0.35rem 2rem 0.35rem 0.5rem;
+    background-color: #ffffff88;
+    border-radius: 0 0.5rem 0 0;
+    backdrop-filter: blur(10px);
+    font-size: 0.7rem;
   }
 ---
 
@@ -101,7 +120,23 @@ _footer: https://www.markdownguide.org/basic-syntax/
 
 ## <span class="morph" style="--morph-name:a1;">Writing your document</span>
 
-In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX. For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source. For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
+In addition to the markdown syntax you can also use LaTeX commands in your document. This is useful if you want to use some advanced features of LaTeX.
+
+<div class="collumns gap">
+<div>
+
+For example you can use the `\newpage` command to start a new page or the `\cite` command to cite a source.
+For a detailed description of the LaTeX syntax see the [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
+
+</div>
+<div class="center">
+
+```latex
+\newpage
+\cite{einstein}
+```
+
+</div>
 
 <!--
 _backgroundImage: url('assets/defaults/wave_amber_50_0.svg')

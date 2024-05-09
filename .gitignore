@@ -9,7 +9,7 @@ package-lock.json
 *.blg
 *.dvi
 *.fdb_latexmk
-*.fls 
+*.fls
 *.log
 *.pdf
 *.run.xml
@@ -21,7 +21,7 @@ package-lock.json
 
 # include everything in assets/ except assets/3x4/
 !assets/*
-assets/3x4/*
+assets/3x2/*
 
 # include examples/ folder
 !examples/*

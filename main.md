@@ -45,7 +45,34 @@ bibliography: sources.bib
 # Markdown Template
 
 One Template to rule them all
-A template for all your markdown needs. Creating beautiful documents and slides by only using markdown.
+A template for all your markdown needs. Creating beautiful documents written in markdown and rendered using pandoc.
+
+<details>
+<summary>Document Example</summary>
+
+![Document Example](examples/example-document.png)
+
+[Document Example PDF](examples/example-document.pdf)
+
+</details>
+
+<details>
+<summary>Slides Example (Dark)</summary>
+
+![Dark Slides Example](examples/example-slides_dark.png)
+
+[Dark Slides Example PDF](examples/example-slides_dark.pdf)
+
+</details>
+
+<details>
+<summary>Slides Example (Light)</summary>
+
+![Light Slides Example](examples/example-slides_light.png)
+
+[Light Slides Example PDF](examples/example-slides_light.pdf)
+
+</details>
 
 # Features
 
@@ -70,15 +97,13 @@ After you finished writing your document you can compile it to a PDF file using 
 
 ```bash
 make			# Renders the main.md and slides.md files to various formats. (Default)
-make document	# Renders the main.md file to a PDF document.
+make document	  # Renders the main.md file to a PDF document.
 make slides		# Renders the slides.md file to a PDF, HTML and PPTX file.
 make clear		# Deletes all temporary files
 make purge		# Deletes all temporary and output files
 make setup		# Installs the template and all dependencies
 make help		# Shows a help message with all available commands
 ```
-
-\newpage
 
 # Setup
 
@@ -87,6 +112,9 @@ To automatically install all dependencies use the Makefile.
 ```bash
 make setup
 ```
+
+<details>
+<summary>Reccomended Editor</summary>
 
 For editing, we recommend using [Visual Studio Code](https://code.visualstudio.com/). It is a free and open source text editor, that can be customized with extensions to fit your needs. We recommend the following extensions.
 
@@ -100,19 +128,27 @@ For editing, we recommend using [Visual Studio Code](https://code.visualstudio.c
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
+</details>
+
 ## Windows
 
 If you are using Windows you can use [Chocolatey](https://chocolatey.org/)\cite{choco_chocolatey_nodate} to install the dependencies through the command line. If you don't have Chocolatey installed already, you can install it by following the instructions on the [Chocolatey website](https://chocolatey.org/install)\cite{choco_chocolatey_nodate}.
 
 ```bash
 # Chocolatey
-choco install pandoc miktex strawberryperl make nodejs
+choco install pandoc miktex strawberryperl make nodejs python3
 npm install
 
-# unzip assets
+# Unzip document backgrounds
 unzip -o assets/ assets/a4.zip
-unzip -o assets/ assets/3x4.zip
+
+# Generate slide backgrounds
+cd assets/textures
+python3 generate_textures.py
 ```
+
+<details>
+<summary>Manual Installation</summary>
 
 It is also possible to install the dependencies manually.
 
@@ -121,6 +157,9 @@ It is also possible to install the dependencies manually.
 - [Strawberry Perl](http://strawberryperl.com/)\cite{perl_strawberry_nodate}
 - [Make](http://gnuwin32.sourceforge.net/packages/make.htm)\cite{gnuwin_make_nodate}
 - [Node.js](https://nodejs.org/en/download/)
+- [Python 3](https://www.python.org/downloads/)
+
+</details>
 
 ## Linux
 
@@ -129,13 +168,19 @@ If you are using Linux you can use the package manager of your distribution to i
 ```bash
 # Debian/Ubuntu
 sudo apt update
-sudo apt-get install pandoc texlive-full perl make nodejs
+sudo apt-get install pandoc texlive-full perl make nodejs python3
 npm install
 
-# unzip assets
+# Unzip document backgrounds
 unzip -o assets/ assets/a4.zip
-unzip -o assets/ assets/3x4.zip
+
+# Generate slide backgrounds
+cd assets/textures
+python3 generate_textures.py
 ```
+
+<details>
+<summary>Manual Installation</summary>
 
 It is also possible to install the dependencies manually.
 
@@ -144,10 +189,14 @@ It is also possible to install the dependencies manually.
 - [Perl](https://www.perl.org/get.html)\cite{perl_perl_nodate}
 - [Make](https://www.gnu.org/software/make/)\cite{gnu_make_nodate}
 - [Node.js](https://nodejs.org/en/download/)
+- [Python 3](https://www.python.org/downloads/)
 
-\newpage
+</details>
 
 # Customization
+
+<details>
+<summary>Pandoc Options</summary>
 
 ## Pandoc Options
 
@@ -172,13 +221,16 @@ pandoc -o output.pdf .main.md --template assets/eisvogel.tex --listings --toc --
 
 - `-o output.pdf`: output file is output.pdf
 - `input.md`: input file is input.md
-- `--template assets/eisvogel.tex`: use [eisvogel.tex](https://github.com/Wandmalfarbe/pandoc-latex-template)\cite{wagler_wandmalfarbepandoc-latex-template_2024} as template
+- `--template assets/eisvogel.tex`: use [eisvogel.tex](https://github.com/Wandmalfarbe/pandoc-latex-template) as template
 - `--listings`: use listings package for code highlighting
 - `--top-level-division=chapter`: use chapters instead of sections
 - `--toc`: generate table of contents
 - `--toc-depth 2`: set depth of table of contents to 2
 
-\newpage
+</details>
+
+<details>
+<summary>Template Variables</summary>
 
 ## Template Variables
 
@@ -317,8 +369,10 @@ You can customize the template by changing the front matter of the `main.md` fil
 
   LaTeX command to change the font size for code blocks. The available values are `\tiny`, `\scriptsize`, `\footnotesize`, `\small`, `\normalsize`, `\large`, `\Large`, `\LARGE`, `\huge` and `\Huge`. This option will change the font size for default code blocks using the verbatim environment and for code blocks generated with listings.
 
+</details>
+
 # Credits
 
-- [Pandoc](https://pandoc.org/)\cite{pandoc_pandoc_nodate-1}
-- [LaTeX](https://www.latex-project.org/)\cite{latex_latex_nodate-1}
-- [Eisvogel Template](https://github.com/Wandmalfarbe/pandoc-latex-template)\cite{wagler_wandmalfarbepandoc-latex-template_2024}
+- [Pandoc](https://pandoc.org/)
+- [LaTeX](https://www.latex-project.org/)
+- [Eisvogel Template](https://github.com/Wandmalfarbe/pandoc-latex-template)
