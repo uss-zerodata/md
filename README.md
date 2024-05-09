@@ -327,6 +327,12 @@ You can customize the template by changing the front matter of the `main.md` fil
 
 </details>
 
+# Known Issues
+
+- Because of the way textures for slides are handled, only a few textures are available by default. In order to get access to the full range of provided textures, you will need to manually generate the textures using the generate-textures.py script. This script is located in the assets/textures folder and will need to be run using Python 3. The `pyyaml` package is required to run the script.
+- VS Code might start to lag a bit when working with large files. Especially when simultaneously working with the marp preview, scrolling through the document can become really janky.
+- The `make` command might not work on Windows. If you are using Windows, you can use the `pandoc` command directly to compile the document.
+
 # Credits
 
 - [Pandoc](https://pandoc.org/)
